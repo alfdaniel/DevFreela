@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace DevFreela.API.Entity
 {
@@ -12,5 +8,6 @@ namespace DevFreela.API.Entity
             Description = description;
         }
         public string Description { get; private set; }
+        public List<UserSkill> UserSkills { get; private set; }
     }
 }
