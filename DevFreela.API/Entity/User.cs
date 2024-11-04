@@ -23,7 +23,7 @@ namespace DevFreela.API.Entity
         public List<UserSkill> Skills { get; private set; }
         public List<Project> OwnedProjects { get; private set; }
         public List<Project> FreelanceProjects { get; private set; }
-        public List<ProjectComments> Comments { get; private set; }
+        public List<ProjectComment> Comments { get; private set; }
 
     }
 }

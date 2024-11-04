@@ -15,7 +15,7 @@ namespace DevFreela.API.Entity
             Comments = [];
         }
 
-        protected Project(){}
+        protected Project() { }
 
         public string Title { get; private set; }
         public string Description { get; private set; }
@@ -27,7 +27,7 @@ namespace DevFreela.API.Entity
         public DateTime? StartedAt { get; private set; }
         public DateTime? CompletedAt { get; private set; }
         public ProjectStatusEnum Status { get; private set; }
-        public List<ProjectComments> Comments { get; private set; }
+        public List<ProjectComment> Comments { get; private set; }
 
         public void Cancel()
         {
@@ -69,6 +69,11 @@ namespace DevFreela.API.Entity
             Description = description;
             TotalCost = totalCost;
         }
+
+        // public void SetAsDeleted()
+        // {
+        //     Status = ProjectStatusEnum.Deleted;
+        // }
 
     }
 }

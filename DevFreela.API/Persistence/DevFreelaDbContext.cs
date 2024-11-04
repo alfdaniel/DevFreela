@@ -13,7 +13,7 @@ namespace DevFreela.API.Persistence
         public DbSet<User> Users { get; set; }
         public DbSet<Skill> Skills { get; set; }
         public DbSet<UserSkill> UserSkills { get; set; }
-        public DbSet<ProjectComments> ProjectComments { get; set; }
+        public DbSet<ProjectComment> ProjectComments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -32,7 +32,7 @@ namespace DevFreela.API.Persistence
                 .OnDelete(DeleteBehavior.Restrict);
             });
 
-            builder.Entity<ProjectComments>(e =>
+            builder.Entity<ProjectComment>(e =>
             {
                 e.HasKey(pc => pc.Id);
                 e.HasOne(pc => pc.Project)

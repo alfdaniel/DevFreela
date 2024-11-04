@@ -1,14 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using DevFreela.API.Entity;
 
 namespace DevFreela.API.Models
 {
     public class ProjectViewModel
     {
-        public ProjectViewModel(int id, string title, string description, int idCliente, int idFreelancer, string clientName, string freelancerName, decimal totalCost, List<ProjectComments> comments)
+        public ProjectViewModel(int id, string title, string description, int idCliente, int idFreelancer, string clientName, string freelancerName, decimal totalCost, List<ProjectComment> comments)
         {
             Id = id;
             Title = title;
