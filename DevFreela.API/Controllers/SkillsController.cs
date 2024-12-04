@@ -1,6 +1,7 @@
-﻿using DevFreela.API.Entity;
-using DevFreela.API.Models;
-using DevFreela.API.Persistence;
+﻿
+using DevFreela.Application.Models;
+using DevFreela.Core.Entity;
+using DevFreela.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,7 +22,8 @@ namespace DevFreela.API.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok();
+            var skills = _context.Skills;
+            return Ok(skills);
         }
 
         [HttpPost]
